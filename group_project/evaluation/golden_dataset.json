@@ -1,17 +1,77 @@
 [
   {
     "question": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong thời hạn bao lâu sau khi nhận hàng?",
-    "expected_answer": "Trong vòng 15 ngày kể từ khi giao hàng thành công (24 giờ đối với thực phẩm tươi sống/đông lạnh).",
-    "expected_context": "Trang Returns and Refunds Policy, mục Return/Refund Eligibility"
+    "expected_answer": "Trong vòng 15 ngày kể từ khi giao hàng thành công (hoặc 24 giờ đối với mặt hàng thực phẩm tươi sống/đông lạnh).",
+    "expected_context": "chinhsachtrahangvahoantien.md"
   },
   {
     "question": "Shopee hỗ trợ những phương thức thanh toán nào?",
-    "expected_answer": "ShopeePay Wallet, thẻ tín dụng/ghi nợ, trả góp qua thẻ, QR Code, chuyển khoản qua app ngân hàng, thẻ NAPAS, Apple Pay, Google Pay, và COD.",
-    "expected_context": "Trang Payment Methods Overview"
+    "expected_answer": "ShopeePay, thẻ tín dụng/ghi nợ (Visa/Mastercard/JCB), chuyển khoản ngân hàng, SPayLater, Apple Pay, Google Pay, và thanh toán khi nhận hàng (COD).",
+    "expected_context": "chinhsachvanchuyen.md"
   },
   {
-    "question": "Người bán không được đăng bán những sản phẩm nào?",
-    "expected_answer": "Hàng giả/nhái, sản phẩm bất hợp pháp, vi phạm sở hữu trí tuệ, và các mặt hàng nằm trong danh sách cấm của sàn.",
-    "expected_context": "Trang Product Listing Regulations, mục Prohibited Content"
+    "question": "Người bán không được đăng bán những sản phẩm nào trên sàn Shopee?",
+    "expected_answer": "Hàng giả/hàng nhái, sản phẩm vi phạm quyền sở hữu trí tuệ, chất cấm, vũ khí, động vật hoang dã và các mặt hàng nằm trong danh sách cấm của pháp luật.",
+    "expected_context": "chinhsachchonggianlan.md"
+  },
+  {
+    "question": "Ai là người chịu phí vận chuyển khi Người mua yêu cầu trả hàng theo hình thức tự sắp xếp?",
+    "expected_answer": "Người Mua sẽ thanh toán trước chi phí vận chuyển trả hàng, sau đó Shopee sẽ hỗ trợ hoàn lại một phần chi phí dưới dạng Shopee Xu nếu đáp ứng điều kiện.",
+    "expected_context": "chinhsachtrahangvahoantien.md"
+  },
+  {
+    "question": "Shopee thu thập những loại thông tin cá nhân nào của người dùng?",
+    "expected_answer": "Họ tên, địa chỉ email, số điện thoại, địa chỉ nhận hàng, thông tin tài khoản thanh toán và lịch sử giao dịch.",
+    "expected_context": "chinhsachbaomat.md"
+  },
+  {
+    "question": "Hành vi nào bị coi là gian lận lạm dụng mã giảm giá và voucher ưu đãi?",
+    "expected_answer": "Tạo nhiều tài khoản ảo để trục lợi mã giảm giá, sử dụng phần mềm tự động (bot) hoặc thông đồng giữa Người mua và Người bán để ảo hóa đơn hàng.",
+    "expected_context": "chinhsachmauudai.md"
+  },
+  {
+    "question": "Người mua cần cung cấp bằng chứng gì khi yêu cầu Trả hàng/Hoàn tiền cho sản phẩm bị vỡ hỏng?",
+    "expected_answer": "Video quay rõ quá trình mở hộp sản phẩm (unbox), hình ảnh rõ nét thể hiện tem nhãn vận chuyển và vết hư hỏng của sản phẩm.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Làm thế nào để người mua kiểm tra hành trình vận chuyển của đơn hàng trên Shopee?",
+    "expected_answer": "Vào mục Tôi > Đơn mua > Chọn đơn hàng tương ứng > Xem thông tin chi tiết tại mục Thông tin vận chuyển.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Khi hủy đơn hàng đã thanh toán bằng Thẻ tín dụng/ghi nợ, thời gian tiền hoàn về tài khoản là bao lâu?",
+    "expected_answer": "Thời gian hoàn tiền vào tài khoản thẻ tín dụng/ghi nợ thường từ 7 đến 14 ngày làm việc tùy thuộc vào ngân hàng phát hành thẻ.",
+    "expected_context": "article_03.md"
+  },
+  {
+    "question": "Tài khoản Shopee sẽ bị xử lý như thế nào nếu bị phát hiện vi phạm chính sách gian lận?",
+    "expected_answer": "Tài khoản có thể bị khóa tạm thời hoặc vĩnh viễn, hủy toàn bộ mã ưu đãi, thu hồi Shopee Xu và từ chối cung cấp dịch vụ.",
+    "expected_context": "chinhsachchonggianlan.md"
+  },
+  {
+    "question": "Người mua có được phép mở hàng kiểm tra trước khi nhận (Đồng kiểm) không?",
+    "expected_answer": "Shopee áp dụng chính sách Đồng kiểm cho phép kiểm tra ngoại quan sản phẩm cùng nhân viên giao hàng trước khi nhận.",
+    "expected_context": "chinhsachvanchuyen.md"
+  },
+  {
+    "question": "Thông tin cá nhân của người dùng có bị bán cho bên thứ ba không?",
+    "expected_answer": "Shopee cam kết không bán hoặc trao đổi thông tin cá nhân của người dùng cho bên thứ ba mà không có sự đồng ý của người dùng, trừ trường hợp theo quy định pháp luật.",
+    "expected_context": "chinhsachbaomat.md"
+  },
+  {
+    "question": "Điều kiện để sử dụng mã miễn phí vận chuyển trên Shopee là gì?",
+    "expected_answer": "Đơn hàng phải đạt giá trị tối thiểu theo quy định của voucher và chọn đúng phương thức thanh toán/đơn vị vận chuyển tương ứng.",
+    "expected_context": "chinhsachmauudai.md"
+  },
+  {
+    "question": "Nếu Người bán không xác nhận đơn hàng đúng hạn thì hệ thống Shopee sẽ xử lý thế nào?",
+    "expected_answer": "Hệ thống Shopee sẽ tự động hủy đơn hàng và hoàn lại 100% tiền cho Người mua nếu đơn hàng đã được thanh toán trước.",
+    "expected_context": "article_04.md"
+  },
+  {
+    "question": "Trường hợp nào Yêu cầu trả hàng hoàn tiền của Người mua sẽ bị từ chối?",
+    "expected_answer": "Yêu cầu gửi quá thời hạn quy định, không cung cấp đủ video/hình ảnh bằng chứng, hoặc sản phẩm bị hư hỏng do lỗi từ phía Người mua.",
+    "expected_context": "chinhsachtrahangvahoantien.md"
   }
 ]
