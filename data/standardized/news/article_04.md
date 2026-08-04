@@ -1,0 +1,26 @@
+# [Khuyến mãi] Ưu đãi Hàng hiệu trên Shopee là gì? | Shopee Trung tâm trợ giúp
+
+**Source:** https://help.shopee.vn/portal/4/article/79260
+**Crawled:** 2026-08-04T12:38:08.937373
+
+---
+
+# Xin chào, Shopee có thể giúp gì cho bạn?
+## [Khuyến mãi] Ưu đãi Hàng hiệu trên Shopee là gì?
+**Ưu đãi Hàng hiệu** là một chương trình khuyến mãi đặc biệt dành cho các sản phẩm hàng hiệu đã được Shopee lựa chọn kỹ lưỡng từ các thương hiệu nổi tiếng/Shop uy tín, với cam kết hàng thật chính hãng 100%
+  
+
+Bạn có thể khám phá ngay những Ưu đãi Hàng hiệu hấp dẫn nhất bằng cách truy cập**Hàng Hiệu -50%** trên trang chủ Ứng dụng Shopee hoặc [_trang thông tin chương trình Ưu đãi Hàng hiệu_](https://shopee.vn/m/tram-ty-uu-dai?smtt=0.0.7&previousPage=other%20articles)
+﻿![](https://fileproxycdn.cs.susercontent.com/api/v5/service/download/permanent/helpcenter-fe/ea5f879d47a84501a680d915942c5cb2.gif)
+Ngoài ra, bạn cũng có thể dễ dàng nhận diện những sản phẩm có áp dụng Ưu đãi Hàng hiệu thông qua nhãn ![](https://lh3.googleusercontent.com/--8CGEnNcuKns-TQRzmIzry91Bw7N9yBnUI9bvxiJbm4qt8pR2wj839cBCXuJJNwiwJdKYSzx6Y6dZxa3NjFf1rKc1Ic1zf5RN0pdMHeVts6RohR-0RyP80GBPVdMVtRYVYcFkE7=s0)được gắn trên sản phẩm
+**⚠️****Lưu ý:**
+  1. Trong trường hợp bạn phát hiện sản phẩm mua từ Ưu đãi Hàng hiệu là hàng không chính hãng, vui lòng liên hệ [_Bộ phận CSKH Shopee_](https://help.shopee.vn/s/article/L%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-li%C3%AAn-h%E1%BB%87-v%E1%BB%9Bi-b%E1%BB%99-ph%E1%BA%ADn-Ch%C4%83m-S%C3%B3c-Kh%C3%A1ch-H%C3%A0ng-c%E1%BB%A7a-Shopee-1542942387756?previousPage=other%20articles) để khiếu nại. Hoặc thể chủ động[ ](https://help.shopee.vn/vn/s/article/Huong-dan-to-cao-Shop-to-cao-san-pham?previousPage=other%20articles)[_tố cáo sản phẩm với Shopee_](https://help.shopee.vn/vn/s/article/Huong-dan-to-cao-Shop-to-cao-san-pham?previousPage=other%20articles) tại trang chi tiết sản phẩm trên ứng dụng Shopee
+  2. Các sản phẩm thuộc chương trình Ưu đãi Hàng hiệu có thể giới hạn số lượng sản phẩm được áp dụng ưu đãi trên mỗi khách hàng
+  3. Một số Voucher sẽ không thể áp dụng cho những sản phẩm thuộc chương trình Ưu đãi Hàng hiệu.
+
+
+  
+
+Bạn có hài lòng với bài viết này?
+Hài lòng
+Không hài lòng
