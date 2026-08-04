@@ -15,12 +15,16 @@ BM25 hoạt động thế nào:
     - k1=1.5 (term saturation), b=0.75 (length normalization)
 """
 
-<<<<<<< HEAD
 import sys
 from pathlib import Path
 
+from rank_bm25 import BM25Okapi
+
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
+
+STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
+CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
 
 # Corpus được load lười (lazy) từ ChromaDB lần đầu gọi
 CORPUS: list[dict] = []
@@ -33,56 +37,26 @@ def _load_corpus():
     if CORPUS:
         return
 
-    try:
-        from task4_chunking_indexing import get_collection
-    except ImportError:
-        from src.task4_chunking_indexing import get_collection
-
-    collection = get_collection()
-    data = collection.get(include=["documents", "metadatas"])
-
-    CORPUS = []
-    for doc, meta in zip(data["documents"], data["metadatas"]):
-        CORPUS.append({"content": doc, "metadata": meta})
-=======
-import json
-from pathlib import Path
-
-from rank_bm25 import BM25Okapi
-
-STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
-CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
-
-CORPUS: list[dict] = []  # List of {'content': str, 'metadata': dict}
->>>>>>> 61c38b9d7d12827d5a9ea53b97afc02648e6bec4
-
-
-def load_corpus() -> list[dict]:
-    """
-    Load corpus chunks.
-    1. Lấy dữ liệu từ ChromaDB nếu đã được index từ Task 4 (qua get_collection() hoặc PersistentClient).
-    2. Fallback: Tự động đọc và chunk các file markdown từ data/standardized/.
-    """
-    global CORPUS
-    if CORPUS:
-        return CORPUS
-
     chunks = []
 
-    # 1. Thử load trực tiếp qua get_collection() của Task 4 hoặc ChromaDB persistent client
+    # 1. Thử load qua get_collection() của Task 4
     try:
-        from src.task4_chunking_indexing import get_collection
+        try:
+            from task4_chunking_indexing import get_collection
+        except ImportError:
+            from src.task4_chunking_indexing import get_collection
         collection = get_collection()
-        results = collection.get()
+        results = collection.get(include=["documents", "metadatas"])
         if results and results.get("documents"):
             for doc, meta in zip(results["documents"], results["metadatas"]):
                 chunks.append({"content": doc, "metadata": meta or {}})
             if chunks:
                 CORPUS = chunks
-                return CORPUS
+                return
     except Exception:
         pass
 
+    # 2. Fallback: ChromaDB persistent client trực tiếp
     if CHROMA_DIR.exists():
         try:
             import chromadb
@@ -96,11 +70,11 @@ def load_corpus() -> list[dict]:
                         chunks.append({"content": doc, "metadata": meta or {}})
                     if chunks:
                         CORPUS = chunks
-                        return CORPUS
+                        return
         except Exception:
             pass
 
-    # 2. Fallback: Đọc trực tiếp từ data/standardized/ và chunk dữ liệu
+    # 3. Fallback: Đọc trực tiếp từ data/standardized/ và chunk dữ liệu
     if STANDARDIZED_DIR.exists():
         md_files = list(STANDARDIZED_DIR.rglob("*.md"))
         try:
@@ -131,7 +105,6 @@ def load_corpus() -> list[dict]:
                     })
 
     CORPUS = chunks
-    return CORPUS
 
 
 def build_bm25_index(corpus: list[dict]):
@@ -141,12 +114,7 @@ def build_bm25_index(corpus: list[dict]):
     Args:
         corpus: List of {'content': str, 'metadata': dict}
     """
-<<<<<<< HEAD
-    from rank_bm25 import BM25Okapi
-
     # Tokenize đơn giản bằng split() (phù hợp cho tiếng Việt đã có dấu cách giữa các từ)
-=======
->>>>>>> 61c38b9d7d12827d5a9ea53b97afc02648e6bec4
     tokenized_corpus = [doc["content"].lower().split() for doc in corpus]
     bm25 = BM25Okapi(tokenized_corpus)
     return bm25
@@ -159,7 +127,7 @@ def lexical_search(query: str, top_k: int = 10, corpus: list[dict] = None) -> li
     Args:
         query: Câu truy vấn
         top_k: Số lượng kết quả tối đa
-        corpus: Corpus tùy chọn (nếu None sẽ tự load qua load_corpus())
+        corpus: Corpus tùy chọn (nếu None sẽ tự load qua _load_corpus())
 
     Returns:
         List of {
@@ -169,11 +137,27 @@ def lexical_search(query: str, top_k: int = 10, corpus: list[dict] = None) -> li
         }
         Sorted by score descending.
     """
-<<<<<<< HEAD
     import numpy as np
 
     global _bm25_index
 
+    if corpus is not None:
+        # Dùng corpus được truyền vào trực tiếp
+        bm25 = build_bm25_index(corpus)
+        tokenized_query = query.lower().split()
+        scores = bm25.get_scores(tokenized_query)
+        sorted_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]
+        results = []
+        for idx in sorted_indices:
+            if scores[idx] > 0:
+                results.append({
+                    "content": corpus[idx]["content"],
+                    "score": float(round(scores[idx], 4)),
+                    "metadata": corpus[idx]["metadata"]
+                })
+        return results
+
+    # Dùng CORPUS global (lazy load từ ChromaDB)
     _load_corpus()
     if not CORPUS:
         return []
@@ -195,30 +179,6 @@ def lexical_search(query: str, top_k: int = 10, corpus: list[dict] = None) -> li
                 "score": float(round(scores[idx], 4)),
                 "metadata": CORPUS[idx]["metadata"]
             })
-=======
-    if corpus is None:
-        corpus = load_corpus()
-
-    if not corpus:
-        return []
-
-    bm25 = build_bm25_index(corpus)
-    tokenized_query = query.lower().split()
-    scores = bm25.get_scores(tokenized_query)
-
-    # Lấy thứ tự các index có điểm giảm dần
-    sorted_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:top_k]
-
-    results = []
-    for idx in sorted_indices:
-        if scores[idx] > 0:
-            results.append({
-                "content": corpus[idx]["content"],
-                "score": float(scores[idx]),
-                "metadata": corpus[idx]["metadata"]
-            })
-
->>>>>>> 61c38b9d7d12827d5a9ea53b97afc02648e6bec4
     return results
 
 
@@ -237,4 +197,3 @@ if __name__ == "__main__":
     else:
         for r in results:
             print(f"  [{r['score']:.3f}] {r['content'][:100]}...")
-
