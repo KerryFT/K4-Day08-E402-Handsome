@@ -1,5 +1,7 @@
+import streamlit as st
+
 def main():
-    print("Hello from k4-day08-e402-handsome!")
+    st.title("HELLO")
 
 
 if __name__ == "__main__":

@@ -41,7 +41,8 @@ ARTICLE_URLS = [
     "https://help.shopee.vn/portal/4/article/79260",
     "https://help.shopee.vn/portal/4/article/79290",
     "https://help.shopee.vn/portal/4/article/79200",
-    "https://help.shopee.vn/portal/4/article/79087"
+    "https://help.shopee.vn/portal/4/article/79087",
+    "https://help.shopee.vn/portal/4/article/79570"
 ]
 
 
