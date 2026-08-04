@@ -44,17 +44,27 @@ CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
 # CONFIGURATION — Giải thích lựa chọn của bạn trong comment
 # =============================================================================
 
-# TODO: Chọn chunking strategy và giải thích vì sao
-CHUNK_SIZE = 500        # Vì sao chọn 500? ...
-CHUNK_OVERLAP = 50      # Vì sao chọn 50? ...
+# Lựa chọn Chunking Strategy: "recursive" (RecursiveCharacterTextSplitter)
+# Lý do chọn:
+# 1. Tập dữ liệu gồm cả văn bản pháp luật (Legal) và bài viết (News) được định dạng Markdown.
+# 2. RecursiveCharacterTextSplitter với separators phân cấp (["\n# ", "\n## ", "\n\n", "\n", ". "])
+#    giúp giữ trọn vẹn ranh giới giữa các tiêu đề/điều khoản mà vẫn đảm bảo chunk không vượt quá CHUNK_SIZE.
+# 3. CHUNK_SIZE = 800 (~150-200 từ tiếng Việt): Vừa đủ chứa trọn vẹn 1 điều khoản pháp lý hoặc 1 đoạn hướng dẫn,
+#    tránh bị quá ngắn (mất ngữ cảnh) hoặc quá dài (gây loãng vector embedding).
+# 4. CHUNK_OVERLAP = 100 (~12.5%): Giữ ngữ nghĩa liên tục giữa các đoạn liền kề, hạn chế mất thông tin ở điểm cắt.
+CHUNK_SIZE = 800
+CHUNK_OVERLAP = 100
 CHUNKING_METHOD = "recursive"  # "recursive" | "markdown_header" | "semantic"
 
-# TODO: Chọn embedding model và giải thích
-EMBEDDING_MODEL = "BAAI/bge-m3"  # Vì sao? Multilingual, tốt cho tiếng Việt lẫn tiếng Anh
+# Lựa chọn Embedding Model: "BAAI/bge-m3" (1024 dim)
+# Lý do chọn: Model multilingual hàng đầu hiện nay, tối ưu vượt trội cho tiếng Việt & tiếng Anh,
+# hỗ trợ cả dense, sparse và multi-vector retrieval.
+EMBEDDING_MODEL = "BAAI/bge-m3"
 EMBEDDING_DIM = 1024
 
-# TODO: Chọn vector store
-VECTOR_STORE = "chromadb"  # "chromadb" | "weaviate" | "faiss"
+# Lựa chọn Vector Store: "chromadb"
+# Lý do chọn: Nhẹ, dễ triển khai local persistent, không phụ thuộc vào Docker/Cloud, tích hợp sẵn cosine similarity.
+VECTOR_STORE = "chromadb"
 COLLECTION_NAME = "ecommerce_support_docs"
 
 
