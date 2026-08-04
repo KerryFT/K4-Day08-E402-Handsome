@@ -1,8 +1,12 @@
 # PHÂN CÔNG THÀNH VIÊN THEO CHECKPOINT
 
-Thành Viên: Hoàng Vũ Trung Nguyên - 2A202601076
-            Hoàng Trung Hải - 2A202601054
-            Vũ Hữu Trường - 2A202601694
+Thành Viên:
+
+Hoàng Vũ Trung Nguyên - 2A202601076
+
+Hoàng Trung Hải - 2A202601054
+
+Vũ Hữu Trường - 2A202601694
 
 > `Checkpoint 0` là bước setup môi trường chung. Năm bảng bên dưới tương ứng với
 > năm checkpoint công việc chính từ `Checkpoint 1` đến `Checkpoint 5`.
