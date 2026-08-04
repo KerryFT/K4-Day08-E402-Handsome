@@ -1,0 +1,43 @@
+# [Voucher/Mã giảm giá] Các loại Voucher/Mã giảm giá trên Shopee | Shopee Trung tâm trợ giúp
+
+**Source:** https://help.shopee.vn/portal/4/article/79250
+**Crawled:** 2026-08-04T12:38:06.781328
+
+---
+
+# Xin chào, Shopee có thể giúp gì cho bạn?
+## [Voucher/Mã giảm giá] Các loại Voucher/Mã giảm giá trên Shopee
+Hiện tại, trên Shopee đang có **03 loại Voucher/Mã giảm** giá chính, bao gồm:
+  
+
+  1. **Voucher miễn phí vận chuyển** , còn được gọi là Mã miễn phí vận chuyển, được sử dụng để khấu trừ chi phí vận chuyển cho đơn hàng
+  2. **Voucher do Người bán phát hành** , còn được gọi là Shop Voucher, bao gồm những Voucher áp dụng riêng cho từng Shop hoặc từng sản phẩm nhất định. Shop Voucher sẽ được ưu tiên áp dụng trước với giá trị ưu đãi tính trên tổng giá trị sản phẩm áp dụng
+  3. **Voucher do Shopee phát hành hoặc được đổi từ**[**Voucher của đối tác**](https://help.shopee.vn/portal/article/125393?source=4&previousPage=other%20articles) , còn được gọi là Shopee Voucher và có thể áp dụng cho nhiều sản phẩm của nhiều Shop khác nhau. Shopee Voucher sẽ được áp dụng trên tổng giá trị sản phẩm/đơn hàng sau khi đã áp dụng ưu đãi từ Shop Voucher
+
+
+Shopee Voucher và Shop Voucher có thể cung cấp nhiều hình thức khuyến mãi đa dạng, bao gồm ưu đãi Hoàn Xu, ưu đãi Giảm giá theo giá trị cố định, và ưu đãi Giảm giá theo phần trăm tổng giá trị sản phẩm/đơn hàng áp dụng ![Done01.png](https://fileproxycdn.cs.susercontent.com/api/v5/service/download/permanent/helpcenter-fe/e9258067626a472e8be9db3a7c322918.jpg)
+Bạn có thể [** _sử dụng đồng thời nhiều loại Voucher khác nhau để tối ưu hoá giá trị khuyến mãi_**](https://help.shopee.vn/s/article/L%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-s%E1%BB%AD-d%E1%BB%A5ng-m%C3%A3-gi%E1%BA%A3m-gi%C3%A1-t%C3%B4i-%C4%91%C3%A3-l%C6%B0u-1542942683947?previousPage=other%20articles&previousPage=other%20articles) nhận được. Tuy nhiên, với mỗi đơn hàng thanh toán, bạn chỉ có thể sử dụng tối đa 01 Voucher thuộc mỗi loại Voucher chính. Cụ thể, với mỗi với mỗi đơn hàng thanh toán, bạn chỉ có thể sử dụng tối đa:
+  
+
+  1. **01 Voucher miễn phí vận chuyển**
+  2. **01 Shop Voucher**
+  3. **01 Shopee Voucher/ Voucher mua sắm trên Shopee của đối tác**
+
+
+  
+
+**Tìm thêm Voucher**
+Bạn có thể [**_tìm thêm Voucher_**](https://help.shopee.vn/s/article/L%C3%A0m-sao-t%C3%B4i-c%C3%B3-th%E1%BB%83-l%C6%B0u-m%C3%A3-khuy%E1%BA%BFn-m%C3%A3i-v%C3%A0o-m%E1%BB%A5c-M%C3%A3-gi%E1%BA%A3m-gi%C3%A1-1542942684752?previousPage=other%20articles) bằng nhiều cách, đơn giản nhất là thông qua tính năng **Mã Giảm Giá** trên Trang chủ Ứng dụng Shopee ![done_gif01.gif](https://fileproxycdn.cs.susercontent.com/api/v5/service/download/permanent/helpcenter-fe/7927101c57244168b86a0441773c3e11.jpg) **Nhận Voucher**
+Tất cả những Voucher của bạn sẽ được lưu trong mục [**_Kho Voucher_**](https://help.shopee.vn/s/article/kho-voucher-tren-shopee-la-gi?previousPage=other%20articles) trên tài khoản Shopee của bạn
+**Sử dụng Voucher**
+  
+
+Bạn có thể [**_sử dụng Voucher có sẵn tại Kho Voucher hoặc nhập thủ công mã giảm giá khi thanh toán đơn hàng_**](https://help.shopee.vn/s/article/cach-su-dung-ma-giam-gia-trong-vi-voucher?previousPage=other%20articles) để nhận được những ưu đãi tương ứng
+[**_Hoàn lại Voucher_**](https://help.shopee.vn/vn/s/article/Neu-huy-don-hang-toi-co-duoc-hoan-lai-Voucher?previousPage=other%20articles)
+  
+
+  
+
+Bạn có hài lòng với bài viết này?
+Hài lòng
+Không hài lòng
