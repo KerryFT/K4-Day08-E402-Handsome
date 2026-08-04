@@ -26,6 +26,7 @@ và chỉ dùng nguồn công khai/được phép chia sẻ.
 """
 
 from pathlib import Path
+import requests
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
 
@@ -36,22 +37,42 @@ def setup_directory():
     print(f"✓ Thư mục đã sẵn sàng: {DATA_DIR}")
 
 
-# TODO: Tải file PDF/DOCX về DATA_DIR
-# Có thể tải thủ công hoặc viết script download nếu có direct link.
-#
-# Ví dụ nếu có direct link:
-#
-# import requests
-#
-# def download_file(url: str, filename: str):
-#     response = requests.get(url)
-#     filepath = DATA_DIR / filename
-#     filepath.write_bytes(response.content)
-#     print(f"✓ Đã tải: {filepath}")
-#
-# Nếu trang là HTML thuần (không phải PDF sẵn), có thể convert nội dung text
-# thành PDF đơn giản bằng thư viện fpdf2 (đã có trong requirements.txt).
+def download_file(url: str, filename: str) -> Path:
+    """Tải file từ URL và lưu vào DATA_DIR (nếu có direct link)."""
+    response = requests.get(url)
+    response.raise_for_status()
+    filepath = DATA_DIR / filename
+    filepath.write_bytes(response.content)
+    print(f"✓ Đã tải: {filepath}")
+    return filepath
+
+
+def collect_legal_docs() -> list[Path]:
+    """
+    Thu thập và xác nhận các file chính sách (PDF/DOCX) trong thư mục DATA_DIR.
+    Nếu chưa đủ 3 file, có thể tải về từ nguồn hỗ trợ.
+    """
+    setup_directory()
+
+    valid_exts = {".pdf", ".docx", ".doc"}
+    existing_files = [
+        f for f in DATA_DIR.iterdir()
+        if f.is_file() and f.suffix.lower() in valid_exts
+    ]
+
+    print(f"--- Đã tìm thấy {len(existing_files)} file chính sách trong {DATA_DIR} ---")
+    for f in existing_files:
+        size_kb = f.stat().st_size / 1024
+        print(f"  • {f.name} ({size_kb:.1f} KB)")
+
+    if len(existing_files) >= 3:
+        print(f"✓ Đã có đủ {len(existing_files)} file chính sách hợp lệ (yêu cầu ≥ 3).")
+    else:
+        print(f"⚠️ Cần thêm {3 - len(existing_files)} file chính sách nữa vào {DATA_DIR}.")
+
+    return existing_files
 
 
 if __name__ == "__main__":
-    setup_directory()
+    collect_legal_docs()
+
