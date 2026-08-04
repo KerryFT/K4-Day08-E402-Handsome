@@ -1,7 +1,8 @@
 # PHÂN CÔNG THÀNH VIÊN THEO CHECKPOINT
 
-Tài liệu này được tổng hợp từ phần **Phân Công Vai Trò & Công Việc Theo Từng
-Checkpoint** trong `LAB_GUIDE.md`.
+Thành Viên: Hoàng Vũ Trung Nguyên - 2A202601076
+            Hoàng Trung Hải - 2A202601054
+            Vũ Hữu Trường - 2A202601694
 
 > `Checkpoint 0` là bước setup môi trường chung. Năm bảng bên dưới tương ứng với
 > năm checkpoint công việc chính từ `Checkpoint 1` đến `Checkpoint 5`.
